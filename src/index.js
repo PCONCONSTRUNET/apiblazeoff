@@ -125,29 +125,34 @@ const startDOMScraping = async () => {
                     console.log(`[DEBUG] Page Title: ${pageTitle} | URL: ${page.url()}`);
                     
                     const rolls = await page.evaluate(() => {
-                        // O histórico real da Blaze usa '.sm-box'. O '.roulette-tile' é a roleta girando!
-                        // Vamos pegar apenas o histórico e filtrar vazios.
-                        // Em algumas versões, Blaze tem duas div com .sm-box (uma na esquerda, outra na direita). 
-                        // Pegamos direto do document, pois todo .sm-box visível pertence ao histórico.
-                        const boxes = Array.from(document.querySelectorAll('.sm-box'));
+                        // O histórico real da Blaze mudou para CSS Modules com a palavra "entry"
+                        const boxes = Array.from(document.querySelectorAll('div[class*="entry"], div[class*="Entry-module__entry"]'));
 
-
-                        return boxes.map(el => {
-                            const className = el.className.toLowerCase();
+                        return boxes.map((el) => {
                             const text = el.innerText.trim();
                             let color = 'unknown';
                             let colorId = -1;
-
-                            if (className.includes('red') || className.includes('danger')) { color = 'red'; colorId = 1; }
-                            else if (className.includes('black') || className.includes('dark')) { color = 'black'; colorId = 2; }
-                            else if (className.includes('white') || className.includes('light')) { color = 'white'; colorId = 0; }
+                            let rollNum = parseInt(text);
+                            
+                            // Se tem número de 1 a 14, garantimos a cor
+                            if (!isNaN(rollNum)) {
+                                if (rollNum >= 1 && rollNum <= 7) { color = 'red'; colorId = 1; }
+                                else if (rollNum >= 8 && rollNum <= 14) { color = 'black'; colorId = 2; }
+                                else if (rollNum === 0) { color = 'white'; colorId = 0; }
+                            } else {
+                                // Se não tem número, e tem uma imagem/svg, é o branco da Blaze
+                                if (el.querySelector('svg, img, [class*="icon"]')) {
+                                    color = 'white'; colorId = 0;
+                                    rollNum = 0;
+                                }
+                            }
 
                             return {
                                 color,
                                 colorId,
-                                text
+                                text: isNaN(rollNum) ? '' : rollNum.toString()
                             };
-                        }).filter(r => r.color !== 'unknown' && r.text !== '');
+                        }).filter(r => r.color !== 'unknown');
                     });
 
                     if (rolls.length > 0) {
