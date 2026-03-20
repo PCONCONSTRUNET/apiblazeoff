@@ -1,0 +1,6 @@
+Connecting with cookies...
+[2026-03-20T12:15:41.379Z] OPEN
+[2026-03-20T12:15:41.381Z] MSG [86b]: 0{"sid":"6mkuEg3WvlzjcstMAAJh","upgrades":[],"pingInterval":25000,"pingTimeout":20000}
+[2026-03-20T12:15:41.381Z] MSG [2b]: 40
+Connected! Subscribing to double_room_1...
+3min up.

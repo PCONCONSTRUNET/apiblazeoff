@@ -4,4 +4,3 @@ puppeteer_session/
 .DS_Store
 .cache/
 dist/
-.chromium-browser/

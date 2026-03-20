@@ -3,4 +3,4 @@ nixPkgs = ["chromium", "nss", "nspr", "atk", "at-spi2-atk", "cups", "dbus", "exp
 
 [variables]
 NODE_ENV = "production"
-PUPPETEER_CACHE_DIR = "/app/.cache/puppeteer"
+PUPPETEER_CACHE_DIR = "/app/puppeteer_cache"

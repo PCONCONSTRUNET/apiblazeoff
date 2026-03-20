@@ -1,0 +1,6 @@
+Connecting...
+[2026-03-20T12:09:41.006Z] OPEN
+[2026-03-20T12:09:41.008Z] MSG [86b]: 0{"sid":"FmDHijdoRdphEbj9AAG0","upgrades":[],"pingInterval":25000,"pingTimeout":20000}
+[2026-03-20T12:09:41.008Z] MSG [2b]: 40
+Socket.IO ready. Subscribing...
+3min up, stopping.
