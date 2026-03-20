@@ -35,14 +35,11 @@ const launchScraper = async () => {
         }
 
         browserInstance = await puppeteer.launch({
-            headless: true,
-            executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
+            headless: false,
             args: [
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
-                '--disable-dev-shm-usage',
-                '--disable-accelerated-2d-canvas',
-                '--disable-gpu'
+                '--disable-dev-shm-usage'
             ]
         });
 
