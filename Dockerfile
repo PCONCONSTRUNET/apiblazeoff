@@ -1,16 +1,15 @@
-FROM node:20-slim
+FROM ghcr.io/puppeteer/puppeteer:22
 
-# Create app directory
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
+
 WORKDIR /app
 
-# Install dependencies
 COPY package*.json ./
-RUN npm install --ignore-scripts
+RUN npm install --omit=dev
 
-# Copy source code
 COPY . .
 
-# Expose the port
-EXPOSE 3001
+EXPOSE 8080
 
-CMD ["npm", "start"]
+CMD ["node", "src/index.js"]

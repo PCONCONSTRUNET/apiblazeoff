@@ -25,8 +25,6 @@ initPatternEngine();
 
 const BLAZE_URL = 'https://blaze.bet.br/pt/games/double?modal=pay_table&game_mode=double_room_1';
 
-const { execSync } = require('child_process');
-
 let browserInstance = null;
 
 const launchScraper = async () => {
@@ -36,22 +34,9 @@ const launchScraper = async () => {
             await browserInstance.close().catch(() => {});
         }
 
-        let chromePath = undefined;
-        if (process.platform === 'linux') {
-            try {
-                // Railway Nixpacks places its installed packages deep inside /nix/store
-                // We use find to locate the exact chromium executable bypassing missing PATH variables
-                chromePath = execSync('find /nix/store -type f -path "*/bin/chromium" | head -n 1').toString().trim();
-            } catch (e) {
-                console.log('Could not find chromium via find:', e.message);
-            }
-        }
-        
-        console.log('Caminho do Chrome (NixOS):', chromePath || 'Nenhum');
-
         browserInstance = await puppeteer.launch({
             headless: true,
-            executablePath: chromePath || undefined,
+            executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
             args: [
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
