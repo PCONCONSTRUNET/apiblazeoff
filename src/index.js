@@ -42,6 +42,10 @@ const connectBlazeWebSocket = () => {
     ws.on('message', (data) => {
         const msg = data.toString();
         
+        if (msg === '2') {
+            ws.send('3');
+        }
+
         // Socket.IO Upgrade Handshake
         if (msg === '3probe') {
             console.log('Probe matched. Upgrading status...');
