@@ -1,7 +1,5 @@
 [phases.setup]
-nixPkgs = ["chromium", "nss", "nspr", "atk", "at-spi2-atk", "cups", "dbus", "expat", "libXcomposite", "libXcursor", "libXdamage", "libXext", "libXfixes", "libXi", "libXrandr", "libXrender", "libXtst", "libxcb", "pango", "cairo", "gdk-pixbuf", "glib", "gtk3", "libdrm", "mesa"]
+nixPkgs = ["nss", "nspr", "atk", "at-spi2-atk", "cups", "dbus", "expat", "libXcomposite", "libXcursor", "libXdamage", "libXext", "libXfixes", "libXi", "libXrandr", "libXrender", "libXtst", "libxcb", "pango", "cairo", "gdk-pixbuf", "glib", "gtk3", "libdrm", "mesa"]
 
 [variables]
-PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
-PUPPETEER_EXECUTABLE_PATH = "/run/current-system/sw/bin/chromium"
 NODE_ENV = "production"
