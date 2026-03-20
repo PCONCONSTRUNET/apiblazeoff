@@ -2,6 +2,9 @@ node_modules/
 .env
 puppeteer_session/
 .DS_Store
-.cache/
 dist/
-.chromium-browser/
+test*.js
+test*.log
+sent.json
+intercept-*.log
+ws_*.txt
