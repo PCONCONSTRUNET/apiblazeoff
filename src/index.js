@@ -25,6 +25,8 @@ initPatternEngine();
 
 const BLAZE_URL = 'https://blaze.bet.br/pt/games/double?modal=pay_table&game_mode=double_room_1';
 
+const { execSync } = require('child_process');
+
 let browserInstance = null;
 
 const launchScraper = async () => {
@@ -34,8 +36,19 @@ const launchScraper = async () => {
             await browserInstance.close().catch(() => {});
         }
 
+        let chromePath = undefined;
+        try {
+            chromePath = execSync('which chromium').toString().trim();
+        } catch (e) {
+            try {
+                chromePath = execSync('which google-chrome').toString().trim();
+            } catch (e2) {}
+        }
+        console.log('Detected Chrome Path:', chromePath || 'None (using local cache)');
+
         browserInstance = await puppeteer.launch({
             headless: true,
+            executablePath: chromePath || undefined,
             args: [
                 '--no-sandbox',
                 '--disable-setuid-sandbox',

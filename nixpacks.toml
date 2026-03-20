@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["nss", "nspr", "atk", "at-spi2-atk", "cups", "dbus", "expat", "libXcomposite", "libXcursor", "libXdamage", "libXext", "libXfixes", "libXi", "libXrandr", "libXrender", "libXtst", "libxcb", "pango", "cairo", "gdk-pixbuf", "glib", "gtk3", "libdrm", "mesa"]
+nixPkgs = ["chromium", "nss", "nspr", "atk", "at-spi2-atk", "cups", "dbus", "expat", "libXcomposite", "libXcursor", "libXdamage", "libXext", "libXfixes", "libXi", "libXrandr", "libXrender", "libXtst", "libxcb", "pango", "cairo", "gdk-pixbuf", "glib", "gtk3", "libdrm", "mesa"]
 
 [variables]
 NODE_ENV = "production"
