@@ -1,0 +1,115 @@
+{
+  "PATTERNS": null,
+  "SIGNALS": [
+    {
+      "id": "ded41ae9-83f2-4525-9c6a-7a33ce3dd83a",
+      "signal_type": "ttt",
+      "entry": "3x Preto → Vermelho/Branco",
+      "protection": "1 Gale",
+      "result": "pending",
+      "rounds": 0,
+      "target": "Double",
+      "created_at": "2026-03-20T09:30:47.272316+00:00",
+      "archived": false
+    },
+    {
+      "id": "d9238ef3-2804-4a13-8bfd-4600c128eb02",
+      "signal_type": "ttt",
+      "entry": "Cobrir Vermelhos/Brancos",
+      "protection": "1 Gale",
+      "result": "pending",
+      "rounds": 1,
+      "target": "reds-whites",
+      "created_at": "2026-03-20T09:30:46.215906+00:00",
+      "archived": false
+    },
+    {
+      "id": "e3c0df18-b68b-447d-83cb-e07556e1f307",
+      "signal_type": "2 vermelho",
+      "entry": "Cobrir Pretos/Brancos",
+      "protection": "2 Gales",
+      "result": "pending",
+      "rounds": 1,
+      "target": "blacks-whites",
+      "created_at": "2026-03-20T09:29:46.104523+00:00",
+      "archived": false
+    },
+    {
+      "id": "9e99a366-f8ac-4ad7-8d8e-a6afd25db1d4",
+      "signal_type": "ttt",
+      "entry": "Cobrir Vermelhos/Brancos",
+      "protection": "1 Gale",
+      "result": "pending",
+      "rounds": 1,
+      "target": "reds-whites",
+      "created_at": "2026-03-20T09:28:49.512903+00:00",
+      "archived": false
+    },
+    {
+      "id": "f53398e8-5970-42dd-96e9-da747f4d6da0",
+      "signal_type": "2 vermelho",
+      "entry": "3x Vermelho → Preto/Branco",
+      "protection": "2 Gales",
+      "result": "pending",
+      "rounds": 0,
+      "target": "Double",
+      "created_at": "2026-03-20T09:28:17.201435+00:00",
+      "archived": false
+    },
+    {
+      "id": "30c25645-193c-4513-868a-8dc5425e0b8c",
+      "signal_type": "2 vermelho",
+      "entry": "Cobrir Pretos/Brancos",
+      "protection": "2 Gales",
+      "result": "pending",
+      "rounds": 1,
+      "target": "blacks-whites",
+      "created_at": "2026-03-20T09:28:15.999207+00:00",
+      "archived": false
+    },
+    {
+      "id": "38f97af4-9258-43dc-ba83-8c27620049f5",
+      "signal_type": "ttt",
+      "entry": "3x Preto → Vermelho/Branco",
+      "protection": "1 Gale",
+      "result": "pending",
+      "rounds": 0,
+      "target": "Double",
+      "created_at": "2026-03-20T09:27:22.107906+00:00",
+      "archived": false
+    },
+    {
+      "id": "1bf16c6e-b8a7-466b-94ef-5e95a7548a1c",
+      "signal_type": "ttt",
+      "entry": "Cobrir Vermelhos/Brancos",
+      "protection": "1 Gale",
+      "result": "pending",
+      "rounds": 1,
+      "target": "reds-whites",
+      "created_at": "2026-03-20T09:27:15.877677+00:00",
+      "archived": false
+    },
+    {
+      "id": "d05ec23f-5519-431b-a2bb-5cbb01180fe1",
+      "signal_type": "ttt",
+      "entry": "Cobrir Vermelhos/Brancos",
+      "protection": "1 Gale",
+      "result": "loss",
+      "rounds": 1,
+      "target": "reds-whites",
+      "created_at": "2026-03-20T09:25:45.826524+00:00",
+      "archived": false
+    },
+    {
+      "id": "b082bf31-5165-4426-bf57-1b0f3571837f",
+      "signal_type": "ttt",
+      "entry": "3x Preto → Vermelho/Branco",
+      "protection": "1 Gale",
+      "result": "green",
+      "rounds": 1,
+      "target": "Double",
+      "created_at": "2026-03-20T09:25:16.89992+00:00",
+      "archived": false
+    }
+  ]
+}

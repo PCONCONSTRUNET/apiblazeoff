@@ -1,0 +1,6 @@
+node_modules/
+.env
+puppeteer_session/
+.DS_Store
+.cache/
+dist/

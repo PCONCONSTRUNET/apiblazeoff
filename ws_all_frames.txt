@@ -1,0 +1,11 @@
+0{"sid":"eTVX14nMrU9FI0dIAAIj","upgrades":[],"pingInterval":25000,"pingTimeout":20000}
+---
+0{"sid":"Uto5ClPp5VjS9czwAAex","upgrades":[],"pingInterval":25000,"pingTimeout":20000}
+---
+0{"sid":"pcSfl7Md1igQLdvMAAfK","upgrades":[],"pingInterval":25000,"pingTimeout":20000}
+---
+0{"sid":"03cOuWg7rD2CRbrBAAef","upgrades":[],"pingInterval":25000,"pingTimeout":20000}
+---
+42["data",{"id":"double.tick","payload":{"id":"BylLdvxylG","color":2,"roll":10,"created_at":"2026-03-18T13:31:15.089Z","updated_at":"2026-03-18T13:31:40.112Z","status":"complete","room_id":4,"total_red_eur_bet":263.4848294367955,"total_red_bets_placed":35,"total_white_eur_bet":552.9773234569053,"total_white_bets_placed":213,"total_black_eur_bet":487.49447385707714,"total_black_bets_placed":48,"bets":[{"id":"6rXLe5eoyr","color":0,"amount":300,"win_amount":600,"currency_type":"BRL","status":"loss","user":{"id":35171,"id_str":"eRlvd8w1jm","username":"PRINCESA LEIA","rank":"diamond"}},{"id":"ylLgb
+---
+42["data",{"id":"pong","payload":{"pingUuid":"155ee16a-5c3c-4e8a-8da7-c154d5e11450","serverTimestamp":1773840703224}}]
