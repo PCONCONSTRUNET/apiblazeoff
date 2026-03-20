@@ -35,25 +35,21 @@ const connectBlazeWebSocket = () => {
     let pingInterval = null;
 
     ws.on('open', () => {
-        console.log('WS Connected! Sending probe...');
-        ws.send('2probe');
+        console.log('WS Connected natively!');
     });
 
     ws.on('message', (data) => {
         const msg = data.toString();
         
+        // Respond to server ping if any
         if (msg === '2') {
             ws.send('3');
         }
 
-        // Socket.IO Upgrade Handshake
-        if (msg === '3probe') {
-            console.log('Probe matched. Upgrading status...');
-            ws.send('5'); // Upgrade
-            setTimeout(() => {
-                ws.send('42["cmd",{"id":"subscribe","payload":{"room":"double_v2"}}]');
-                console.log('Subscribed to double_v2 room!');
-            }, 500);
+        // Socket.IO Native WebSocket Connected (no upgrade needed)
+        if (msg.startsWith('40')) {
+            console.log('Socket.IO Connected! Subscribing to rooms...');
+            ws.send('42["cmd",{"id":"subscribe","payload":{"room":"double_v2"}}]');
 
             // Heartbeat ping every 25s to keep connection alive
             pingInterval = setInterval(() => {
