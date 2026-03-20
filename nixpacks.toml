@@ -3,6 +3,4 @@ nixPkgs = ["chromium", "nss", "nspr", "atk", "at-spi2-atk", "cups", "dbus", "exp
 
 [variables]
 NODE_ENV = "production"
-
-[phases.build]
-cmds = ["npm install", "npx puppeteer browsers install chrome"]
+PUPPETEER_CACHE_DIR = "/app/.cache/puppeteer"
