@@ -3,3 +3,6 @@ nixPkgs = ["nss", "nspr", "atk", "at-spi2-atk", "cups", "dbus", "expat", "libXco
 
 [variables]
 NODE_ENV = "production"
+
+[phases.build]
+cmds = ["npm install", "npx puppeteer browsers install chrome"]
