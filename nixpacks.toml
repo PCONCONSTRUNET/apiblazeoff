@@ -3,4 +3,5 @@ nixPkgs = ["chromium", "nss", "nspr", "atk", "at-spi2-atk", "cups", "dbus", "exp
 
 [variables]
 NODE_ENV = "production"
-PUPPETEER_CACHE_DIR = "/app/puppeteer_cache"
+PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
+PUPPETEER_EXECUTABLE_PATH = "/usr/bin/chromium"
